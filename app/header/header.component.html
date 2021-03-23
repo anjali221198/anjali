@@ -1,0 +1,52 @@
+
+ 
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+    <a class="navbar-brand" href="#">
+      <!--<img src="../assets/Air2.jpg" alt="logo" style="width:40px;">-->
+    </a>
+    Links
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="navbar-brand" routerLink='/home' routerLinkActive='active'> Home {{'Home'|translate}}</a>
+
+      </li>
+
+
+
+      <li class="nav-item">
+        <a class="navbar-brand" routerLink='/review' routerLinkActive='active'>Reviews</a>
+      </li>
+
+
+
+      <li class="nav-item">
+        <a class="navbar-brand" routerLink='/technologies' routerLinkActive='active'>Technologies</a>
+      </li>
+
+
+
+      <li class="nav-item">
+        <a class="navbar-brand" routerLink='/td-registration' routerLinkActive='active'>TdRegistration</a>
+      </li>
+
+
+
+      <li class="nav-item">
+        <a class="navbar-brand" routerLink='/md-registration' routerLinkActive='active'>MdRegistration</a>
+
+      </li>
+
+      <li class="nav-item">
+        <a class="navbar-brand" routerLink='/login' routerLinkActive='active'>Logout</a>
+
+      </li>
+      <select #locale (change)='changeLocale(locale.value)'>
+        <option value='en'>English</option>
+        <option value='fr'>French</option>
+      </select>
+
+      <p>{{'hello' | translate }}</p>
+    </ul>
+  </nav>

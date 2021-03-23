@@ -1,0 +1,21 @@
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+.myimage {
+  float: left;
+  width: 100px;
+  height: 150px;
+  margin: 5px;
+}
+
+body {
+  background-image: url('C:\Final\finalproject\src\assets\training.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

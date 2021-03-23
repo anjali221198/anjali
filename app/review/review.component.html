@@ -1,0 +1,80 @@
+<!--<p>review works!</p>-->
+<!--<p>review works!</p>-->
+<!--<p>reviews works!</p>-->
+<app-header></app-header>
+<body>
+  <section>
+    <h2>Review Details</h2>
+    <hr />
+    <table>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search..."
+               [(ngModel)]="searchedKeyword">
+      </div>
+      <td>
+        <label>Sort : </label>
+        <select [(ngModel)]='SortbyParam'>
+          <option value="reviewerId">Reviewer Id</option>
+          <option value="reviewerName">Reviewer Name</option>
+          <option value="reviewerAddress">Reviewer Address</option>
+          <option value="reviewerDescription">Reviewer Description</option>
+          <option value="reviewerImage">Reviewer Image</option>
+        </select>
+      </td>
+      <tr>
+
+        <th>Reviewer Id</th>
+        <th>Reviewer Description</th>
+        <!--<th>Reviewer Address</th>-->
+        <!--<th>Product Description</th>-->
+        <th>Trainer Image</th>
+      </tr>
+      <tr *ngFor='let reviewers of reviewer '>
+        <td>
+
+          <b>
+            {{reviewers.reviewerId}}
+          </b>
+
+
+
+        </td>
+        <td>
+          <b>
+            {{reviewers.reviewDescription}}
+          </b><b></b>
+        </td>
+        <!--<td>
+          <b>
+            {{reviewers.trainerImage}}
+          </b>
+        </td>-->
+        <!--<td>
+          <b>
+            products.productDescription}}
+          </b>
+        </td>-->
+        <td>
+          <app-footer></app-footer>
+
+
+
+
+
+
+          <img [src]='reviewers.trainerImage' alt="" border=3 height=100 width=100 />
+        </td>
+      </tr>
+    </table>
+  </section>
+  <div class="div2" *ngIf="!reviewer.length">
+    <h1 align="center">Reviewer is not there</h1>
+  </div>
+  follow me template
+  <div class="maded">
+
+
+
+  </div>
+</body>
+
